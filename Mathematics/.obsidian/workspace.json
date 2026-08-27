@@ -1,0 +1,190 @@
+{
+  "main": {
+    "id": "4a1b379640d8b2ac",
+    "type": "split",
+    "children": [
+      {
+        "id": "1605e5120721bd57",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "704e242773e7bae2",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "Nouvel onglet"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "691d2e44ea86cff9",
+    "type": "split",
+    "children": [
+      {
+        "id": "5d0e9d0333f888c9",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "55c4dd3a3085ac1d",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Explorateur de fichiers"
+            }
+          },
+          {
+            "id": "a04724d2bb3197f5",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Rechercher"
+            }
+          },
+          {
+            "id": "590d21e767a86612",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-bookmark",
+              "title": "Signets"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 200
+  },
+  "right": {
+    "id": "3da4e664fcece2cc",
+    "type": "split",
+    "children": [
+      {
+        "id": "01f903359ef9811d",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "3943022c6127891d",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Rétroliens"
+            }
+          },
+          {
+            "id": "87a904854a6a88c9",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Liens sortants"
+            }
+          },
+          {
+            "id": "dc8108e33e53c0f7",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Mots-clés"
+            }
+          },
+          {
+            "id": "53d2ecc4c471d1c0",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "Toutes les propriétés"
+            }
+          },
+          {
+            "id": "360af603772565bc",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Plan"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Ouvrir le sélecteur rapide": false,
+      "graph:Ouvrir la vue graphique": false,
+      "canvas:Créer une nouvelle toile": false,
+      "daily-notes:Ouvrir la note quotidienne": false,
+      "templates:Insérer le modèle": false,
+      "command-palette:Ouvrir la palette de commandes": false,
+      "bases:Créer une nouvelle base": false
+    }
+  },
+  "active": "704e242773e7bae2",
+  "lastOpenFiles": [
+    "Notes/List des cours.md",
+    "Bienvenue.md",
+    "Notes"
+  ]
+}
