@@ -1,0 +1,1 @@
+- [Introduction to Reinforcement Learning](https://www.youtube.com/watch?v=VnpRp7ZglfA&t=2847s) : Vidéo YouTube très complète et bien expliqué

@@ -1,0 +1,1 @@
+- [Cours Deep Learnin](https://youtube.com/playlist?list=PLO_fdPEVlfKoanjvTJbIbd9V5d9Pzp8Rw&si=BuJDeQY1i1-QnuNF) : Meilleur vidéos pour apprendre les bases du Deep Learning donc les perceptrons et les MLP.

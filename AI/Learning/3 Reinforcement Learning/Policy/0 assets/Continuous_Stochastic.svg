@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-47.3124 -0.6415 293.653 118.0839" role="img" aria-label="TikZ SVG preview">
+  <path data-source-id="path:0" d="M -29.0218 88.2059 L 227.053 88.2059" stroke="black" fill="none" stroke-width="1.2" stroke-linecap="butt" stroke-linejoin="miter" stroke-opacity="1" fill-opacity="1"/>
+  <path data-source-id="path:1" d="M 99.0156 88.2059 L 99.4424 17.3585" stroke="black" fill="none" stroke-width="1.2" stroke-linecap="butt" stroke-linejoin="miter" stroke-opacity="1" fill-opacity="1"/>
+  <g transform="matrix(1.2 0 0 1.2 4.8654 -19.0923)">
+    <svg data-source-id="path:2" data-text-renderer="mathjax" data-paragraph-id="paragraph-23" data-text-layout-kind="single-line" data-scene-text-id="scene-text:path:2:node:2:2" x="-28.4815" y="92.1438" width="8.3088" height="6.6351" viewBox="0 -666 834 666" color="#000000" opacity="1" overflow="visible">
+      <g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)">
+        <g data-mml-node="math" data-latex="\parbox[t]{8.34pt}{-1}">
+          <g data-mml-node="mpadded" data-overflow="linebreak" data-vertical-align="top" data-latex="\parbox[t]{8.34pt}{-1}" data-align="left" data-paragraph-id="paragraph-23">
+            <g data-mml-node="mtext">
+              <path data-c="2D" d="M11 187L276 187L276 245L11 245Z"></path>
+              <path data-c="31" d="M269 666C228 624 168 603 89 603L89 564C141 564 184 572 217 588L217 82C217 64 213 52 204 47C195 42 170 39 130 39L95 39L95 0C120 2 174 3 257 3C340 3 394 2 419 0L419 39L384 39C343 39 318 42 310 47C302 52 297 64 297 82L297 636C297 660 295 666 269 666Z" transform="translate(333,0)"></path>
+            </g>
+          </g>
+        </g>
+      </g>
+    </svg>
+  </g>
+  <g transform="matrix(1.2 0 0 1.2 -45.0692 -19.0923)">
+    <svg data-source-id="path:3" data-text-renderer="mathjax" data-paragraph-id="paragraph-25" data-text-layout-kind="single-line" data-scene-text-id="scene-text:path:3:node:3:3" x="222.8502" y="92.1438" width="4.9913" height="6.6351" viewBox="0 -666 501 666" color="#000000" opacity="1" overflow="visible">
+      <g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)">
+        <g data-mml-node="math" data-latex="\parbox[t]{5.01pt}{1}">
+          <g data-mml-node="mpadded" data-overflow="linebreak" data-vertical-align="top" data-latex="\parbox[t]{5.01pt}{1}" data-align="left" data-paragraph-id="paragraph-25">
+            <g data-mml-node="mtext">
+              <path data-c="31" d="M269 666C228 624 168 603 89 603L89 564C141 564 184 572 217 588L217 82C217 64 213 52 204 47C195 42 170 39 130 39L95 39L95 0C120 2 174 3 257 3C340 3 394 2 419 0L419 39L384 39C343 39 318 42 310 47C302 52 297 64 297 82L297 636C297 660 295 666 269 666Z"></path>
+            </g>
+          </g>
+        </g>
+      </g>
+    </svg>
+  </g>
+  <svg data-source-id="path:4" data-text-renderer="mathjax" data-paragraph-id="paragraph-31" data-text-layout-kind="single-line" data-scene-text-id="scene-text:path:4:node:4:3" x="135.7504" y="92.461" width="12.7422" height="6.8543" viewBox="0 -666 1279 688" color="#000000" opacity="1" overflow="visible">
+    <g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)">
+      <g data-mml-node="math" data-latex="\parbox[t]{12.79pt}{0.2}">
+        <g data-mml-node="mpadded" data-overflow="linebreak" data-vertical-align="top" data-latex="\parbox[t]{12.79pt}{0.2}" data-align="left" data-paragraph-id="paragraph-31">
+          <g data-mml-node="mtext">
+            <path data-c="30" d="M249-22C390-22 460 92 460 320C460 473 428 575 365 625C330 652 291 666 250 666C109 666 39 551 39 320C39 136 88-22 249-22M361 524C368 489 371 425 371 332C371 240 367 172 360 128C347 48 310 8 249 8C226 8 203 17 182 34C155 57 139 104 132 176C129 201 128 253 128 332C128 419 131 480 136 513C145 568 163 603 191 618C213 630 232 636 249 636C314 636 350 583 361 524Z"></path>
+            <path data-c="2E" d="M192 53C192 82 168 106 139 106C110 106 86 82 86 53C86 24 110 0 139 0C168 0 192 24 192 53Z" transform="translate(500,0)"></path>
+            <path data-c="32" d="M237 666C186 666 143 648 106 612C69 576 50 534 50 483C50 449 75 424 106 424C136 424 161 450 161 480C161 513 137 536 105 536C102 536 100 536 98 535C117 584 161 627 224 627C306 627 352 556 352 470C352 403 318 331 250 255L62 43C49 28 50 29 50 0L421 0L450 180L417 180C409 129 402 100 396 91C391 86 361 84 306 84L139 84L236 179C304 243 390 312 419 365C439 400 449 435 449 470C449 588 357 666 237 666Z" transform="translate(778,0)"></path>
+          </g>
+        </g>
+      </g>
+    </g>
+  </svg>
+  <path data-source-id="path:5" d="M 71.2742 88.2059 C 128.0374 88.2059 113.9533 45.5267 142.1215 45.5267" stroke="#ff0000" fill="none" stroke-width="1.6" stroke-linecap="butt" stroke-linejoin="miter" stroke-opacity="1" fill-opacity="1"/>
+  <path data-source-id="path:6" d="M 216.3832 88.2059 C 156.6324 88.2059 170.7165 45.5267 142.1215 45.5267" stroke="#ff0000" fill="none" stroke-width="1.6" stroke-linecap="butt" stroke-linejoin="miter" stroke-opacity="1" fill-opacity="1"/>
+  <path data-source-id="path:7" d="M -28.595 88.6326 L 71.2742 88.2059" stroke="#ff0000" fill="none" stroke-width="1.6" stroke-linecap="butt" stroke-linejoin="miter" stroke-opacity="1" fill-opacity="1"/>
+  <path data-source-id="path:8" d="M 216.3832 88.2059 L 227.053 88.2059" stroke="#ff0000" fill="none" stroke-width="1.6" stroke-linecap="butt" stroke-linejoin="miter" stroke-opacity="1" fill-opacity="1"/>
+  <path data-source-id="path:9" d="M 142.1215 46.3803 L 142.1215 91.6202" stroke="black" fill="none" stroke-width="0.8" stroke-linecap="butt" stroke-linejoin="miter" stroke-opacity="1" fill-opacity="1" stroke-dasharray="0.8 2"/>
+</svg>

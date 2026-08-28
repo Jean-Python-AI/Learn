@@ -4,21 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "97f94f0b8f9244fc",
+        "id": "dbe31597bb49e0f5",
         "type": "tabs",
         "children": [
           {
-            "id": "c1bc4c5b8351c8c5",
+            "id": "e6b2a07c6f4b400a",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "AI/Architecures/1 MLP/Back-Propagation.md",
-                "mode": "preview",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "Back-Propagation"
+              "title": "Nouvel onglet"
             }
           }
         ]
@@ -83,7 +79,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 314.109375
+    "width": 239.953125
   },
   "right": {
     "id": "ad9875bc3885f214",
@@ -188,10 +184,36 @@
       "bases:Créer une nouvelle base": false
     }
   },
-  "active": "c1bc4c5b8351c8c5",
+  "active": "8130bdd2dfbbf44d",
   "lastOpenFiles": [
-    "AI/Architecures/1 MLP/0 Index.md",
+    "2026-08-28.md",
+    "Sans titre.base",
+    "AI/Learning/3 Reinforcement Learning/Policy/2 Stochastic Policy.md",
+    "AI/Learning/3 Reinforcement Learning/Policy/3 Discrete Action Space.md",
+    "AI/Learning/3 Reinforcement Learning/Policy/4 Continuous Action Space.md",
+    "AI/Learning/3 Reinforcement Learning/Policy/0 assets/Continuous_Stochastic.svg",
+    "AI/Learning/3 Reinforcement Learning/Policy/0 assets/w7o8g8a6y49mt72vii9.svg",
+    "AI/Learning/3 Reinforcement Learning/Policy/w7o8g8a6y49mt72vii9.svg",
+    "AI/Learning/3 Reinforcement Learning/w7o8g8a6y49mt72vii9.svg",
+    "AI/Learning/w7o8g8a6y49mt72vii9.svg",
+    "AI/w7o8g8a6y49mt72vii9.svg",
+    "w7o8g8a6y49mt72vii9.svg",
+    "AI/Learning/3 Reinforcement Learning/Policy/1 Deterministic Policy.md",
+    "AI/Learning/3 Reinforcement Learning/Policy/0 Index.md",
+    "AI/Learning/3 Reinforcement Learning/0 Index.md",
+    "AI/Policy/4 Continuous Action Space.md",
+    "AI/Policy/3 Discrete Action Space.md",
+    "AI/Policy/2 Stochastic Policy.md",
+    "AI/Policy/1 Deterministic Policy.md",
+    "AI/Policy/0 Index.md",
+    "AI/0 Index.md",
+    "AI/Policy",
+    "AI/Architecures/1 MLP/Vectorisation.md",
+    "AI/Architecures/1 MLP/z Sources.md",
+    "AI/Architecures/0 Perceptron/z Sources.md",
     "AI/Architecures/1 MLP/Back-Propagation.md",
+    "AI/Learning/3 Reinforcement Learning/z Sources.md",
+    "AI/Architecures/1 MLP/0 Index.md",
     "MLP/Perceptron/00 Index.md",
     "MLP/Perceptron",
     "MLP",
@@ -206,32 +228,8 @@
     "AI/Learning/3 Reinforcement Learning/MDP/0 Index.md",
     "AI/Architecures/2 CNN",
     "AI/Architecures",
-    "AI/Learning/3 Reinforcement Learning/Policy/Continuous Action Space.md",
-    "AI/Learning/3 Reinforcement Learning/Policy/Discrete Action Space.md",
-    "Mathematics/Notes/List des cours.md",
-    "AI/Learning/3 Reinforcement Learning/Policy/0 Index.md",
-    "AI/Learning/3 Reinforcement Learning/Policy/Stochastic Policy.md",
-    "AI/Learning/3 Reinforcement Learning/Policy/Deterministic Policy.md",
-    "AI/Learning/3 Reinforcement Learning/Fundamentals/Reward.md",
-    "AI/Learning/3 Reinforcement Learning/Fundamentals/Action.md",
-    "AI/Learning/3 Reinforcement Learning/Fundamentals/State.md",
-    "AI/Learning/3 Reinforcement Learning/Fundamentals/0 assets",
-    "AI/Learning/3 Reinforcement Learning/Policy/0 assets",
-    "AI/Learning/3 Reinforcement Learning/Fundamentals/Environement.md",
-    "AI/Learning/3 Reinforcement Learning/Fundamentals/Agent.md",
-    "AI/Learning/3 Reinforcement Learning/Fundamentals/0 Index.md",
-    "AI/Learning/3 Reinforcement Learning/0 Index.md",
-    "AI/Architecures/0 Perceptron/Descante de gradients.md",
     "AI/Learning/3 Reinforcement Learning/0 assets/RL.svg",
     "AI/RL/RL.svg",
-    "AI/RL.svg",
-    "RL.svg",
-    "AI/RL/assets/w7o8g8a6y49mt72vii9.svg",
-    "AI/RL/w7o8g8a6y49mt72vii9.svg",
-    "AI/w7o8g8a6y49mt72vii9.svg",
-    "AI/Architecures/0 Perceptron/Log Loss.md",
-    "AI/Architecures/1 MLP/Vectorisation.md",
-    "Exercices/Pendule/2 AI.md",
-    "AI/Architecures/1 MLP/Forward Propagation.md"
+    "AI/RL.svg"
   ]
 }
