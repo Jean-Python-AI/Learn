@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="38.7632 -3.9159 221.2274 192.6324" role="img" aria-label="TikZ SVG preview">
+  <path data-source-id="path:0" d="M 56.7632 99.4424 L 234.1907 99.4424" stroke="black" fill="none" stroke-width="1.2" stroke-linecap="butt" stroke-linejoin="miter" stroke-opacity="1" fill-opacity="1"/>
+  <path data-source-id="path:0" data-arrow-tip-kind="latex" data-arrow-side="end" data-arrow-index="0" data-arrow-bend="false" d="M 238.3501 99.4424 C 237.8393 99.2783 235.594 98.3487 234.1907 97.337 L 234.1907 101.5478 C 235.594 100.5361 237.8393 99.6064 238.3501 99.4424 Z" stroke="black" fill="black" stroke-width="1.2" stroke-linecap="butt" stroke-linejoin="miter" stroke-opacity="1" fill-opacity="1"/>
+  <path data-source-id="path:2" d="M 142.1215 170.7165 L 142.1215 22.3109" stroke="black" fill="none" stroke-width="1.2" stroke-linecap="butt" stroke-linejoin="miter" stroke-opacity="1" fill-opacity="1"/>
+  <path data-source-id="path:2" data-arrow-tip-kind="latex" data-arrow-side="end" data-arrow-index="0" data-arrow-bend="false" d="M 142.1215 18.1515 C 141.9575 18.6623 141.0278 20.9076 140.0161 22.3109 L 144.2269 22.3109 C 143.2152 20.9076 142.2856 18.6623 142.1215 18.1515 Z" stroke="black" fill="black" stroke-width="1.2" stroke-linecap="butt" stroke-linejoin="miter" stroke-opacity="1" fill-opacity="1"/>
+  <path data-source-id="path:3" d="M 56.7632 42.6791 C 85.3583 99.4424 93.8941 142.1215 241.9907 14.0841" stroke="#ff0000" fill="none" stroke-width="1.6" stroke-linecap="butt" stroke-linejoin="miter" stroke-opacity="1" fill-opacity="1"/>
+  <path data-source-id="path:4" d="M 95.6013 142.1215 L 241.9907 14.0841" stroke="#6666ff" fill="none" stroke-width="0.8" stroke-linecap="butt" stroke-linejoin="miter" stroke-opacity="1" fill-opacity="1" stroke-dasharray="0.8 1"/>
+  <g transform="matrix(0.6128 -0.5142 0.5142 0.6128 -30.4127 103.0211)">
+    <svg data-source-id="path:5" data-text-renderer="mathjax" data-paragraph-id="paragraph-17" data-text-layout-kind="single-line" data-scene-text-id="scene-text:path:5:node:5:2" x="91.8259" y="130.3363" width="15.2329" height="7.3524" viewBox="0 -716 1529 738" color="#7070ff" opacity="1" overflow="visible">
+      <g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)">
+        <g data-mml-node="math" data-latex="\parbox[t]{15.29pt}{AO}">
+          <g data-mml-node="mpadded" data-overflow="linebreak" data-vertical-align="top" data-latex="\parbox[t]{15.29pt}{AO}" data-align="left" data-paragraph-id="paragraph-17">
+            <g data-mml-node="mtext">
+              <path data-c="41" d="M583 3L717 0L717 39L695 39C670 39 653 40 646 42C631 47 621 58 615 75L401 694C397 707 390 716 375 716C362 716 353 709 348 694L143 102C129 61 92 39 32 38L32 0L137 3L254 0L254 39C205 39 180 54 180 85C180 92 181 96 182 98L227 225L465 225L516 77C518 71 519 67 519 64C519 47 492 39 437 39L437 0C479 3 528 4 583 3M345 569L451 264L240 264Z"></path>
+              <path data-c="4F" d="M388-22C484-22 564 15 628 88C690 158 721 242 721 339C721 436 690 521 629 592C564 667 484 705 388 705C292 705 212 667 148 592C87 521 56 436 56 339C56 242 87 159 148 88C213 15 293-22 388-22M557 575C593 522 611 448 611 353C611 230 585 140 533 84C488 36 440 12 389 12C337 12 288 36 243 85C192 141 166 230 166 353C166 472 193 558 247 609C293 651 340 672 388 672C456 672 512 640 557 575Z" transform="translate(750,0)"></path>
+            </g>
+          </g>
+        </g>
+      </g>
+    </svg>
+  </g>
+</svg>

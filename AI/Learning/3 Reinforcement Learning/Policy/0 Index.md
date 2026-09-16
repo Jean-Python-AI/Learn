@@ -1,33 +1,41 @@
-Une **Policy** est une règle utilisé par l'agent pour décider l'action qu'il va prendre.
+# Policy
+
+> Une **policy** $\pi$ est la règle utilisée par l'agent pour choisir une action à partir de l'état (ou de l'observation) courant.
+
+Une policy déterministe associe directement une action à un état :
 
 $$
-s_t​→a_t​
+a_t=\pi(s_t).
 $$
-La policy return une action ($a_t$) en fonction d'un état à l'instant $t$ ($s_t$).
 
-**Attention**, Policy ≠ Agent
-- Agent : système complet qui interagit avec l'environnement.
-- Policy : a partie qui décide des actions, le "cerceau".
+Une policy stochastique associe une **distribution** d'actions à un état, puis une action est échantillonnée :
 
+$$
+a_t\sim\pi(\cdot\mid s_t).
+$$
 
-Une Policy n'est pas spécialement un réseau de neurones.
-Il peut aussi être quelque chose de très simple comme:
+## Policy $\ne$ agent
+
+- **Agent** : le système complet qui interagit avec l'environnement et peut apprendre, mémoriser ou planifier.
+- **Policy** : la partie qui décide de l'action, parfois appelée le « cerveau » décisionnel de l'agent.
+
+Une policy n'est pas nécessairement un réseau de neurones. Elle peut être une règle très simple :
+
 ```python
 if angle > 0:
-    action = left
+    action = "left"
 else:
-    action = right
+    action = "right"
 ```
 
+## Deux axes de description
 
+On distingue une policy par la manière dont elle choisit, puis par le type d'action qu'elle manipule :
 
-Il y a différents types de Policy.
-En fonction de *comment elle choisissent une action*:
-    [[1 Deterministic Policy|Deterministic]] ou [[2 Stochastic Policy|Stochastic]]
-Et en fonction de *Quelle type d'actions elle choisissent:*
-    [[3 Discrete Action Space|Discrete]] ou [[4 Continuous Action Space|Continuous]]
+- [[1 Deterministic Policy|déterministe]] ou [[2 Stochastic Policy|stochastique]] ;
+- [[3 Discrete Action Space|espace d'actions discret]] ou [[4 Continuous Action Space|espace d'actions continu]].
 
-|                   | **Discrete**               | **Continuous**                  |
-| ----------------- | -------------------------- | ------------------------------- |
-| **Deterministic** | une action précise         | une valeur précise              |
-| **Stochastic**    | une probabilité par action | une distribution de probabilité |
+| | **Discret** | **Continu** |
+| --- | --- | --- |
+| **Déterministe** | une action précise | une valeur précise ou un vecteur précis |
+| **Stochastique** | une probabilité par action | une distribution de probabilité sur les actions |

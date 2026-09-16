@@ -1,32 +1,42 @@
-Une **Stochastic Policy** défini une policy qui pour un état donné vas retourner la liste des actions possible avec leurs probabilitées d'être faite (contrairement à une policy [[1 Deterministic Policy|Deterministic]] qui fera toujours la même chose).
+# Policy stochastique
+
+> Une policy stochastique associe à un état une distribution de probabilité sur les actions possibles, contrairement à une [[1 Deterministic Policy|policy déterministe]] qui renvoie toujours la même action.
+
+Elle se note :
 
 $$
-s→P(a∣s)
+\pi(a\mid s)=P(A_t=a\mid S_t=s).
 $$
-La policy vas donné la probalité de prendre l'action $a$ en fonction de $s$.
 
-Ce qui donnera par exemple:
+La policy fournit une distribution, puis l'agent y effectue un tirage. Dans un espace discret :
+
 $$
-s → \pi →
+s \xrightarrow{\pi}
 \begin{bmatrix}
- left && 0.2 \\
- stay && 0.3 \\
- right && 0.5
+\text{gauche} & 0.2 \\
+\text{rester} & 0.3 \\
+\text{droite} & 0.5
 \end{bmatrix}
-→ sample → action(right)
+\xrightarrow{\text{échantillonnage}}
+\text{action(droite)}.
 $$
-- $s$ : état (input)
-- $\pi$ : policy
-- $left$  $0.2$ = $20$% de chance de faire l'action $left$
-- $sample$ : tirage au sort
 
+- $s$ : état en entrée ;
+- $\pi$ : policy ;
+- « gauche, $0.2$ » : $20\%$ de probabilité de choisir l'action gauche ;
+- échantillonnage : tirage aléatoire suivant cette distribution.
 
-Cela vas donc donné en sortie pour le même états répété plusieurs fois, ceci:
+Les probabilités des actions possibles doivent sommer à $1$. Pour le même état répété, les actions observées peuvent donc différer :
+
 $$
 \begin{aligned}
-s_a = action(right) \\
-s_a = action(stay) \\
-s_a = action(right)
+a_t &= \text{action(droite)} \\
+a_t &= \text{action(rester)} \\
+a_t &= \text{action(droite)}.
 \end{aligned}
 $$
+Pour que les probabilité d'action somme à 1, il faut utiliser [[SoftMax]].
 
+
+
+Voir aussi [[3 Discrete Action Space|espace discret]] et [[4 Continuous Action Space|espace continu]].

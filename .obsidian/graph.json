@@ -6,17 +6,32 @@
   "hideUnresolved": false,
   "showOrphans": true,
   "collapse-color-groups": true,
-  "colorGroups": [],
+  "colorGroups": [
+    {
+      "query": "path:AI  ",
+      "color": {
+        "a": 1,
+        "rgb": 16764447
+      }
+    },
+    {
+      "query": "path:Mathematics  ",
+      "color": {
+        "a": 1,
+        "rgb": 16135991
+      }
+    }
+  ],
   "collapse-display": true,
   "showArrow": false,
-  "textFadeMultiplier": 0,
-  "nodeSizeMultiplier": 1,
-  "lineSizeMultiplier": 1,
+  "textFadeMultiplier": 0.1,
+  "nodeSizeMultiplier": 1.00068699731903,
+  "lineSizeMultiplier": 0.997402815013405,
   "collapse-forces": true,
   "centerStrength": 0.518713248970312,
   "repelStrength": 10,
   "linkStrength": 1,
   "linkDistance": 250,
-  "scale": 1.192730775743559,
+  "scale": 0.6820509534973046,
   "close": true
 }

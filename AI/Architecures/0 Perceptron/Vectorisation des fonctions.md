@@ -1,161 +1,149 @@
+# Vectorisation des fonctions du perceptron
 
-- $m$ : nombre de données
-- $n$ : nombre de inputs
+La vectorisation remplace une boucle qui traite les exemples un par un par quelques opérations sur des matrices. Elle calcule en une fois les scores $Z$, les activations $A$, la loss et les gradients d’un batch entier.
 
-La matrice des entrées:
+## Les données d’un batch
+
+On note :
+
+- $m$ : nombre de données (exemples) ;
+- $n$ : nombre d’entrées par exemple ;
+- $x_j^{(i)}$ : entrée $j$ de l’exemple $i$ ;
+- $y^{(i)}$ : sortie attendue de l’exemple $i$.
+
+### Convention avec les exemples en lignes
+
+Cette première convention correspond à la formulation initiale de la note. Chaque ligne de $X$ est un exemple :
+
 $$
-X =
+X=
 \begin{bmatrix}
-  x_1^{(1)} & \dots & x_n^{(1)} \\
-  x_1^{(2)} & \dots & x_n^{(2)} \\
-  \vdots & \vdots & \vdots \\
-  x_1^{(m)} & \dots & x_n^{(m)}
+x_1^{(1)} & \dots & x_n^{(1)} \\
+x_1^{(2)} & \dots & x_n^{(2)} \\
+\vdots & \vdots & \vdots \\
+x_1^{(m)} & \dots & x_n^{(m)}
 \end{bmatrix}
+\in\mathbb{R}^{m\times n}
 $$
-La matrice des sorties attendue (bonnes réponsses)
+
 $$
-Y = 
+Y=
 \begin{bmatrix}
-	y^{(1)} \\
-	y^{(2)} \\
-	\vdots \\
-	y^{(m)}
+y^{(1)} \\
+y^{(2)} \\
+\vdots \\
+y^{(m)}
 \end{bmatrix}
-$$
-
-La matrice des poids du modèle
-$$
-W =
+\in\mathbb{R}^{m\times1}
+\qquad
+W=
 \begin{bmatrix}
-	w_1 \\
-	w_2 \\
-	\vdots \\
-	w_n
+w_1 \\
+w_2 \\
+\vdots \\
+w_n
 \end{bmatrix}
+\in\mathbb{R}^{n\times1}
 $$
 
----
+## Calcul de $Z$
 
-### $Z(x_1, x_2, ..., x_n)$
-**sous forme de matrice**
+Pour chaque exemple, le perceptron calcule $z^{(i)}=w_1x_1^{(i)}+\ldots+w_nx_n^{(i)}+b$. Pour tout le batch :
 
 $$
-Z =
+Z=
 \begin{bmatrix}
-	z^{(1)} \\
-	z^{(2)} \\
-	\vdots \\
-	z^{(m)}
+z^{(1)} \\
+z^{(2)} \\
+\vdots \\
+z^{(m)}
 \end{bmatrix}
 =
 \begin{bmatrix}
-	w_1 x_1^{(1)} + \dots + w_n x_n^{(1)} + b \\
-	w_1 x_1^{(2)} + \dots + w_n x_n^{(2)} + b \\
-	\vdots \\
-	w_1 x_1^{(m)} + \dots + w_n x_n^{(m)} + b
+w_1x_1^{(1)}+\dots+w_nx_n^{(1)}+b \\
+w_1x_1^{(2)}+\dots+w_nx_n^{(2)}+b \\
+\vdots \\
+w_1x_1^{(m)}+\dots+w_nx_n^{(m)}+b
 \end{bmatrix}
-=
-\begin{bmatrix}
-  x_1^{(1)} & \dots & x_n^{(1)} \\
-  x_1^{(2)} & \dots & x_n^{(2)} \\
-  \vdots & \vdots & \vdots \\
-  x_1^{(m)} & \dots & x_n^{(m)}
-\end{bmatrix}
-\begin{bmatrix}
-	w_1 \\
-	w_2 \\
-	\vdots \\
-	w_n
-\end{bmatrix}
-+
-\begin{bmatrix}
-	b \\
-	b \\
-	\vdots \\
-	b
-\end{bmatrix}
-$$
-En simplifier
-$$
-Z = XW + b
 $$
 
+La même opération s’écrit simplement :
 
----
-### $a(z)$
-**sous forme de matrice**
 $$
-A = \frac{1}{1 + e^{-Z}}
+Z=XW+b
 $$
 
+Ici, le scalaire $b$ est ajouté à chaque ligne de $XW$ par diffusion (*broadcasting*).
 
----
-### Calcul des nouveaux $w_1, w_2, ..., w_n$ avec la descente de gradients
-**sous forme de matrices**
+## Calcul de $A$
+
+La sigmoïde s’applique terme à terme :
+
 $$
-w_n = w_n - \alpha \frac{d \mathcal{L}}{d w_n}
+A=\frac{1}{1+e^{-Z}}
 $$
- sauf que maintenant, au lieu de calculer les modifications pour chaque poids ($w_x$) séparément, ont peut tous calculer en une fois en remplacent $w_x$ par la matrice de tous les $w$.
- $$
- W = W - \alpha \frac{d \mathcal{L}}{d W}
- $$
-**Ce que donne** $\frac{d \mathcal{L}}{d W}$
+
+Ainsi, $A$ contient toutes les sorties $a^{(1)},\ldots,a^{(m)}$. Voir [[AI/Architecures/0 Perceptron/A(Z)|Fonction d’activation sigmoïde]] et [[AI/Architecures/0 Perceptron/Log Loss|Log-loss binaire]].
+
+## Mettre à jour les paramètres
+
+La descente de gradient reste la même pour chaque poids :
+
 $$
-\frac{d \mathcal{L}}{d W} =
+w_j\leftarrow w_j-\alpha\frac{\partial\mathcal{L}}{\partial w_j}
+$$
+
+La vectorisation permet de mettre à jour tous les poids simultanément :
+
+$$
+W\leftarrow W-\alpha\frac{\partial\mathcal{L}}{\partial W}
+$$
+
+Avec la log-loss binaire et une sortie sigmoïde :
+
+$$
+\frac{\partial\mathcal{L}}{\partial W}
+=\frac{1}{m}
 \begin{bmatrix}
-	\frac{d \mathcal{L}}{d w_1} \\
-	\frac{d \mathcal{L}}{d w_2} \\
-	\vdots \\
-	\frac{d \mathcal{L}}{d w_n}
+\sum_{i=1}^{m}\left(a^{(i)}-y^{(i)}\right)x_1^{(i)} \\
+\sum_{i=1}^{m}\left(a^{(i)}-y^{(i)}\right)x_2^{(i)} \\
+\vdots \\
+\sum_{i=1}^{m}\left(a^{(i)}-y^{(i)}\right)x_n^{(i)}
 \end{bmatrix}
-= \frac{1}{m}
-\begin{bmatrix}
-	\sum_{i=1}^m (a^{(i)} - y^{(i)}) x_1^{(i)} \\
-	\sum_{i=1}^m (a^{(i)} - y^{(i)}) x_2^{(i)} \\
-	\vdots \\
-	\sum_{i=1}^m (a^{(i)} - y^{(i)}) x_n^{(i)}
-\end{bmatrix}
-= \frac{1}{m}
-\begin{bmatrix}
-	x_1^{(1)} && x_1^{(2)} && \dots && x_1^{(m)} \\
-	x_2^{(1)} && x_2^{(2)} && \dots && x_2^{(m)} \\
-	\vdots && \vdots && \vdots && \vdots \\
-	x_n^{(1)} && x_n^{(2)} && \dots && x_n^{(m)}
-\end{bmatrix}
-(
-\begin{bmatrix}
-	a^{(1)} \\
-	a^{(2)} \\
-	\vdots \\
-	a^{(m)}
-\end{bmatrix}
--
-\begin{bmatrix}
-	y^{(1)} \\
-	y^{(2)} \\
-	\vdots \\
-	y^{(m)}
-\end{bmatrix}
-)
+=\frac{1}{m}X^T(A-Y)
 $$
-donc, en mieux écrit
-$$
-\frac{d \mathcal{L}}{d W} = \frac{1}{m} X^T (A - Y)
-$$
-Où
-- $X^T$ : Matrice X transposée
-- $A$ : matrice des $a$
-- Y : matrice des $y$ attendue (bonnes réponsses)
 
+Pour le biais :
 
-**Pour le biais** ($b$), vus qu'il est inutile de le changer en vecteur, il reste $b$ simple.
 $$
-b = b -\alpha \frac{d \mathcal{L}}{d b}
+b\leftarrow b-\alpha\frac{\partial\mathcal{L}}{\partial b}
+\qquad\text{avec}\qquad
+\frac{\partial\mathcal{L}}{\partial b}
+=\frac{1}{m}\sum_{i=1}^{m}\left(a^{(i)}-y^{(i)}\right)
 $$
-Où
-$$
-\frac{d \mathcal{L}}{d b} = \frac{1}{m} \sum_{i=1}^m (A - Y)
-$$
-- $A$ : matrice des $a$
-- Y : matrice des $y$ attendue (bonnes réponsses)
 
+> [!warning] Correction de signe
+> Le gradient contient $A-Y$, et non $Y-A$. La règle de mise à jour soustrait déjà le gradient.
+
+## Convention utilisée pour le MLP
+
+Les notes du [[AI/Architecures/1 MLP/0 Index|MLP]] placent plutôt les exemples en colonnes. C’est exactement la transposée de la convention ci-dessus :
+
+$$
+X_{\text{colonnes}}=X^T\in\mathbb{R}^{n\times m}
+$$
+
+Dans cette convention, un perceptron s’écrit :
+
+$$
+Z=WX+b,
+\qquad
+A=\frac{1}{1+e^{-Z}},
+\qquad
+\frac{\partial\mathcal{L}}{\partial W}
+=\frac{1}{m}(A-Y)X^T
+$$
+
+Les deux conventions sont correctes. L’essentiel est de choisir une orientation et de la conserver tout au long d’un calcul, pour éviter des transpositions ou des gradients incohérents.
+
+Voir aussi [[AI/Architecures/0 Perceptron/Descante de gradients|Descente de gradient]] et [[AI/Architecures/1 MLP/Vectorisation|Vectorisation du MLP]].

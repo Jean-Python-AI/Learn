@@ -1,11 +1,15 @@
-Lorsqu'une policy est défini par **continuous action space**, cela signifie que l'action déterminé par la policy en fonction de $s$ peut prendre une infinité de valeurs dans un intervalle (contrairement à une [[3 Discrete Action Space|policy discrete]]).
+# Espace d'actions continu
 
-Par exemple:
+> Un espace d'actions continu contient une infinité de valeurs possibles. La policy détermine une action en fonction de l'état $s$, contrairement à une [[3 Discrete Action Space|policy à espace discret]].
+
+Par exemple :
+
 $$
-action∈[−1,1]
+\mathcal A=[-1,1].
 $$
 
-les actions pourrais donc être:
+Les actions possibles peuvent donc être :
+
 $$
 \begin{aligned}
 -0.8345 \\
@@ -16,23 +20,38 @@ $$
 \end{aligned}
 $$
 
-Une [[1 Deterministic Policy|policy déterministe]] ferais donc:
-$state = 0.3781$
+Une [[1 Deterministic Policy|policy déterministe]] retourne une valeur précise :
 
+$$
+a_t=\pi(s_t)=0.3781.
+$$
 
-Alors qu'une [[2 Stochastic Policy|policy stochastic]] ferais:
-$state → \pi → \begin{bmatrix}μ=0.2 \\ σ=0.2\end{bmatrix}$
-pour ensuite créer la distribution gaussienne en fonction de ces deux éléments ($μ$ et $σ$)
+Une [[2 Stochastic Policy|policy stochastique]] peut produire les paramètres d'une distribution, par exemple :
+
+$$
+s_t \rightarrow \pi \rightarrow
+\begin{bmatrix}
+\mu=0.2 \\
+\sigma=0.3
+\end{bmatrix}.
+$$
+
+On construit alors une distribution gaussienne à partir de ces deux éléments, $\mu$ et $\sigma$ :
+
 ![[Continuous_Stochastic.svg|479]]
-Et enfin, on tire une action dans cette distribution.
-Ce qui donnera pour le même state, différentes actions possible.
+
+On y échantillonne enfin une action. Pour le même état, cela peut donner différentes actions :
+
 $$
 \begin{aligned}
-state = 0.18 \\
-state = 0.23 \\
-state = 0.39 \\
-state = 0.15 \\
-state = \dots
+a_t &= 0.18 \\
+a_t &= 0.23 \\
+a_t &= 0.39 \\
+a_t &= 0.15 \\
+a_t &= \dots
 \end{aligned}
 $$
 
+## Attention aux bornes
+
+Une Gaussienne a un support non borné : elle peut échantillonner une valeur hors de $[-1,1]$. Lorsqu'une action doit respecter des bornes physiques, il faut utiliser une distribution bornée ou transformer un échantillon, par exemple $a_t=\tanh(u_t)$ avec $u_t\sim\mathcal N(\mu,\sigma)$. Cette transformation doit aussi être prise en compte lorsqu'on calcule la log-probabilité de l'action en policy gradient.

@@ -1,11 +1,40 @@
+# Fonction d’activation sigmoïde — $A(Z)$
+
 ![[a(z).svg|460]]
-$a(z)$ = sortie final du perceptron
-cela correspond à une probabilité qui se trouve entre 0 et 1 de faire partie d'une des deux cathégories.
 
-**Formule mathématique pour trouver $a(z)$ en fonction de $z$ :**
+Après le calcul linéaire $z$, le perceptron produit une sortie $a(z)$. Pour une classification binaire, la fonction sigmoïde transforme ce score en une valeur comprise entre 0 et 1.
+
 $$
-a(z) = \frac{1}{1+e^{-z}}
+a(z)=\frac{1}{1+e^{-z}}
 $$
 
-**ATTENTION** en programation, on utilise des vecteurs au lieux d'éxecuter plusieurs fois les mêmes calculs.
-Pour retrouver la fonction $a(z)$ vectoriser => [[Vectorisation des fonctions]]
+Lorsque le modèle est entraîné pour estimer une classe binaire, $a(z)$ peut être interprété comme une estimation de la probabilité de la classe positive :
+
+$$
+a(z)\approx P(y=1\mid x)
+$$
+
+## Entrée et sortie
+
+- $z$ : sortie linéaire du perceptron, par exemple $z=w^T x+b$ ;
+- $a(z)$ : activation transmise à la suite du réseau ou utilisée comme probabilité binaire.
+
+## Dérivée utile pour l’apprentissage
+
+La dérivée de la sigmoïde peut s’écrire à partir de sa propre sortie :
+
+$$
+\frac{da}{dz}=a(z)\bigl(1-a(z)\bigr)
+$$
+
+Cette relation est utilisée lors de la [[AI/Architecures/1 MLP/Back-Propagation|rétropropagation]].
+
+## Vectorisation
+
+En programmation, on applique la sigmoïde à tous les éléments d’un tableau en une opération :
+
+$$
+A=\frac{1}{1+e^{-Z}}
+$$
+
+Voir [[AI/Architecures/0 Perceptron/Vectorisation des fonctions|Vectorisation du perceptron]].
